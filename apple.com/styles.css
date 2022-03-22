@@ -20,6 +20,10 @@ time, mark, audio, video {
     font-family: "SF Pro Text","Myriad Set Pro","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
 }
 
+html, body {
+    overflow-x: hidden;
+}
+
 a {
     color: #0066cc;
     text-decoration: none;
@@ -98,21 +102,32 @@ ul {
     align-items: center;
     margin-left: 28px;
 }
-.big-wrapper{
-    display: flex;
-    flex-direction: column;
-}
 .unit-wrapper{
-    height: 600px;
+    position: relative;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    padding-top: 60px;
     text-align: center;
 }
+.main-product-wrapper{
+    display: flex;
+    flex-direction: column;
+}
+.main-product-wrapper .unit-wrapper{
+    height: 600px;   
+}
+.sub-product-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    }
+.sub-product-wrapper .unit-wrapper {
+        height: 534px;
+        width: 50%;
+    }
 .unit-title{
     font-size: 48px;
     font-weight: 500;
+    margin-top: 30px;
 }
 .unit-subtitle{
     font-size: 24px;
@@ -128,10 +143,35 @@ ul {
 .unit-links{
     display: inline-block;
     font-size: 19px;
-    margin: 16px 12px;
-    
+    margin: 16px 12px;   
 }
-.iphone13 {
+
+.sub-product-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+.sub-product-wrapper .unit-wrapper {
+    height: 534px;
+    width: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+    background-size: 516px 490px;
+    position: absolute;
+    top:0;
+    left:0;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: -1;
+}
+
+.iphone13-pro {
     background-image: url("./assets/images/iphone13pro.jpg");
 }
 .iphone-se {
@@ -140,4 +180,74 @@ ul {
 .ipad-air {
     color: #f5f5f7;
     background-image: url("./assets/images/ipadair.jpg");
+}
+.studio-display {
+    background-image: url("./assets/images/studiodisplay.jpg");
+}
+.mac-studio {
+    background-image: url("./assets/images/macstudio.jpg");
+}
+.iphone13 {
+    background-image: url("./assets/images/iphone13.jpg");
+}
+.watch {
+    background-image: url("./assets/images/watch.jpg");
+}
+.card {
+    background-image: url("./assets/images/card.jpg");
+}
+.tv {
+    color:#f5f5f7;
+    background-image: url("./assets/images/tv.jpg");
+}
+
+@media screen and (max-width: 414px) {
+
+    .nav {
+        display: none;
+    }
+
+    .section-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .donate{
+        width: 215px;
+        font-size: 14px;
+        text-align: center;
+        line-height: 1.47;
+        margin: 4px 0 0 0;
+    }
+    .main-product-wrapper .unit-wrapper{
+        height: 500px;   
+    }
+    .unit-title {
+        font-size: 32px;
+    }
+    .unit-subtitle{
+        font-size: 19px;
+    }
+    .available {
+        display: none;
+    }
+    
+    .unit-links {
+        font-size: 17px;
+    }
+    .sub-product-wrapper .unit-wrapper {
+        height: 534px;
+        width: 100%;
+    }
+
+    .iphone13-pro {
+        background-image: url("./assets/images/iphone13pro_small.jpg");
+    }
+    .iphone-se {
+        background-image: url("./assets/images/iphonese_small.jpg");
+    }
+
+
+    
 }
