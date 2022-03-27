@@ -20,6 +20,8 @@ time, mark, audio, video {
     font-family: "SF Pro Text","Myriad Set Pro","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
 }
 
+* {box-sizing: border-box;}
+
 html, body {
     overflow-x: hidden;
 }
